@@ -25,9 +25,9 @@ This creates the base project structure, including pages and package.json.
 
 2. **Install Dependencies**
 Add required libraries for file handling, CSV parsing, queuing, and API requests:
-cmd
+    ```cmd
 
-npm install multer csv-parser bull axios redis
+    npm install multer csv-parser bull axios redis
 
 Ensures multer, csv-parser, bull, axios, and redis are available.
 
@@ -41,9 +41,9 @@ Right-click the ZIP file in Downloads.
 Select "Extract All," set destination to C:\Redis, and click "Extract."
 
 4. **Test Redis:**
-cmd
+     ```cmd
 
-cd C:\Redis
+        cd C:\Redis
 redis-server.exe
 
 Expected output: "Server started, Redis version 3.2.100" and "ready to accept connections on port 6379."
@@ -52,10 +52,10 @@ Press Ctrl+C to stop for now.
 
 5. **Set Up Directory Structure**
 Create directories for the project components:
-cmd
+    ```cmd
 
-cd C:\Users\aarti\nextjs-csv-processing
-mkdir lib workers pages\api uploads
+    cd C:\Users\aarti\nextjs-csv-processing
+    mkdir lib workers pages\api uploads
 
 lib: Utility modules.
 
@@ -68,17 +68,15 @@ uploads: Temporary storage for uploaded CSVs.
 Enable ES Modules
 Modify package.json to support ES6 import syntax:
 Open C:\Users\aarti\nextjs-csv-processing\package.json in an editor.
+     ```
 
-Add "type": "module":
-json
-
-{
-  "name": "nextjs-csv-processing",
-  "type": "module",
-  "version": "0.1.0",
-  "private": true,
-  ...
-}
+     {
+      "name": "nextjs-csv-processing",
+      "type": "module",
+      "version": "0.1.0",
+      "private": true,
+     ...
+      }
 
 6. **Save the file.**
 
@@ -97,27 +95,27 @@ pages\index.js: Frontend upload form.
 7. **Running the Application**
 Start Redis
 Open a Command Prompt (Terminal 1):
-cmd
+     ``` cmd
 
-C:\Redis\redis-server.exe
+    C:\Redis\redis-server.exe
 
 Keep this running to handle the job queue.
 
 Start the Worker
 Open a second Command Prompt (Terminal 2):
-cmd
+     ```cmd
 
-cd C:\Users\aarti\nextjs-csv-processing
-node workers\userProcessor.js
+       cd C:\Users\aarti\nextjs-csv-processing
+         node workers\userProcessor.js
 
 Processes queued jobs from CSV uploads.
 
 8. **Start the Next.js Server**
 Open a third Command Prompt (Terminal 3):
-cmd
+        ```cmd
 
-cd C:\Users\aarti\nextjs-csv-processing
-npm run dev
+         cd C:\Users\aarti\nextjs-csv-processing
+         npm run dev
 
 Runs the app at http://localhost:3000.
 
