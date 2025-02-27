@@ -1,6 +1,7 @@
 # Next.js CSV Processing
 
-This is a Next.js application designed to upload CSV files containing user data (name and email), process them in the background using a queue system, and interact with an external API to add users. Developed on Windows, it showcases file handling, background job processing, API integration, and robust error management.
+This is a Next.js application designed to upload CSV files containing user data (name and email), process them in the background using a queue system, and interact with an external API to add users. 
+Developed on Windows, it showcs file handling, background job processing, API integration,  error management.
 
 ---
 
