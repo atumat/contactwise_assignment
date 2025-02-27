@@ -16,38 +16,36 @@ This is a Next.js application that allows users to upload CSV files containing u
    cd C:\Users\YourUsername\nextjs-csv-processing
    npm install
 
-Install Redis on Windows:
+3. Install Redis on Windows:
 Download redis-x64-3.2.100.zip from https://github.com/microsoftarchive/redis/releases.
 
-Extract to C:\Redis:
+4. Extract to C:\Redis:
 Right-click the ZIP, select "Extract All," choose C:\Redis.
 
-Test it:
-cmd
+5. Test it:
+   ```cmd
 
-cd C:\Redis
-redis-server.exe
+    cd C:\Redis
+    redis-server.exe
 
 You should see "Server started, Redis version 3.2.100" and port 6379 active.
 
-Run the application:
+7. Run the application:
 Open three Command Prompt windows:
 Window 1: Start Redis
-cmd
+    ```cmd
 
-C:\Redis\redis-server.exe
+    C:\Redis\redis-server.exe
 
-Window 2: Start the worker
-cmd
+8. Window 2: Start the worker
+    ```cmd
+    cd C:\Users\YourUsername\nextjs-csv-processing
+    node workers\userProcessor.js
 
-cd C:\Users\YourUsername\nextjs-csv-processing
-node workers\userProcessor.js
-
-Window 3: Start the Next.js server
-cmd
-
-cd C:\Users\YourUsername\nextjs-csv-processing
-npm run dev
+9. Window 3: Start the Next.js server
+    ```cmd
+    cd C:\Users\YourUsername\nextjs-csv-processing
+    npm run dev
 
 
 
