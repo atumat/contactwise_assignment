@@ -1,5 +1,4 @@
-Create a new file in your editor (e.g., Notepad, VS Code) and paste the following:
-markdown
+
 
 # Next.js CSV Processing
 
